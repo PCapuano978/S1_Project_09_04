@@ -1,0 +1,21 @@
+/* 
+
+      New Perspectives on HTML5 and CSS3, 7th Edition
+      Tutorial 7
+      Case Problem 4
+
+      Millennium Computers
+      Author: Patrick M Capuano
+      Date:   1.17.19
+
+      Filename:   mc.forms.css 
+      
+*/
+
+/* Validation Styles */
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: rgb(245, 245, 140);
+}

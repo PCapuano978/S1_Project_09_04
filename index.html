@@ -1,0 +1,53 @@
+<head>
+    <!--
+      New Perspectives on HTML5 and CSS3, 7th Edition
+      Tutorial 7
+      Case Problem 4
+
+      Millennium Computers
+      Author: Patrick M Capuano
+      Date:   1.17.19
+
+      Filename:   index.html
+
+   -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="mc_styles.css" />
+    <link rel="stylesheet" href="mc_forms.css" />
+    <script src="mc_script.js"></script>
+
+
+</head>
+
+<body>
+
+    <form name="cForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
+
+        <label for="fName">First Name</label>
+        <input name="fName" id="firstBox" type="text" required>
+
+        <label for="lName">Last name</label>
+        <input name="lName" id="lastBox" type="text" required>
+
+        <label for="street">Street Address</label>
+        <input name="street" id="streetBox" type="text" required>
+
+        <label for="city">City</label>
+        <input name="city" id="cityBox" type="text" required>
+
+        <label for="state">State</label>
+        <input name="state" id="stateBox" type="text" required>
+
+        <label for="zip">Zip Code</label>
+        <input name="zip" id="zipBox" type="text" pattern="^\d{5}(-\d{4})?$" required>
+
+        <label for="phone">Phone Number</label>
+        <input name="phone" id="phoneBox" type="text" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required>
+
+    </form>
+
+
+
+</body>
