@@ -14,8 +14,32 @@
 
 /* Validation Styles */
 
+div {
+    float: left;
+}
+
 input:focus,
 select:focus,
 textarea:focus {
     background: rgb(245, 245, 140);
+}
+
+input#firstBox:focus:valid,
+input#lastBox:focus:valid,
+input#streetBox:focus:valid,
+input#cityBox:focus:valid,
+input#stateBox:focus:valid,
+input#phoneBox:focus:valid,
+input#zipBox:focus:valid {
+    background: rgb(220, 255, 220) url("mc_go.png") right/contain no-repeat;
+}
+
+input#firstBox:focus:invalid,
+input#lastBox:focus:invalid,
+input#streetBox:focus:invalid,
+input#cityBox:focus:invalid,
+input#stateBox:focus:invalid,
+input#phoneBox:focus:invalid,
+input#zipBox:focus:invalid {
+    background: rgb(255, 232, 220) url("mc_stop.png") right/contain no-repeat;
 }

@@ -23,31 +23,104 @@
 
 <body>
 
-    <form name="cForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
+    <div>
 
-        <label for="fName">First Name</label>
-        <input name="fName" id="firstBox" type="text" required>
+        <form name="cForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
 
-        <label for="lName">Last name</label>
-        <input name="lName" id="lastBox" type="text" required>
+            <div>
+                <label for="fName">First Name</label>
+                <input name="fName" id="firstBox" type="text" placeholder="Your First Name" required>
+            </div>
 
-        <label for="street">Street Address</label>
-        <input name="street" id="streetBox" type="text" required>
+            <div>
+                <label for="lName">Last name</label>
+                <input name="lName" id="lastBox" type="text" placeholder="Your Last Name" required>
+            </div>
 
-        <label for="city">City</label>
-        <input name="city" id="cityBox" type="text" required>
+            <div>
+                <label for="street">Street Address</label>
+                <input name="street" id="streetBox" type="text" placeholder="Your Street Address" required>
+            </div>
 
-        <label for="state">State</label>
-        <input name="state" id="stateBox" type="text" required>
+            <div>
+                <label for="city">City</label>
+                <input name="city" id="cityBox" type="text" placeholder="Your City" required>
+            </div>
 
-        <label for="zip">Zip Code</label>
-        <input name="zip" id="zipBox" type="text" pattern="^\d{5}(-\d{4})?$" required>
+            <div>
+                <label for="state">State</label>
+                <input name="state" id="stateBox" type="text" list="stateList" placeholder="(NN)" required>
+            </div>
 
-        <label for="phone">Phone Number</label>
-        <input name="phone" id="phoneBox" type="text" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required>
+            <div>
+                <label for="zip">Zip Code</label>
+                <input name="zip" id="zipBox" type="text" pattern="^\d{5}(-\d{4})?$" placeholder="(nnnnn)" required>
+            </div>
 
-    </form>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input name="phone" id="phoneBox" type="text" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+                    placeholder="(nnn) nnn-nnnn" required>
+            </div>
+
+            <div>
+                <datalist id="stateList">
+                    <option value="Al"></option>
+                    <option value="Ak"></option>
+                    <option value="AZ"></option>
+                    <option value="AR"></option>
+                    <option value="CA"></option>
+                    <option value="CO"></option>
+                    <option value="CT"></option>
+                    <option value="DE"></option>
+                    <option value="FL"></option>
+                    <option value="GA"></option>
+                    <option value="HI"></option>
+                    <option value="ID"></option>
+                    <option value="IL"></option>
+                    <option value="IN"></option>
+                    <option value="IA"></option>
+                    <option value="KS"></option>
+                    <option value="KY"></option>
+                    <option value="LA"></option>
+                    <option value="ME"></option>
+                    <option value="MD"></option>
+                    <option value="MA"></option>
+                    <option value="MI"></option>
+                    <option value="MN"></option>
+                    <option value="MS"></option>
+                    <option value="MO"></option>
+                    <option value="MT"></option>
+                    <option value="NE"></option>
+                    <option value="NV"></option>
+                    <option value="NH"></option>
+                    <option value="NJ"></option>
+                    <option value="NM"></option>
+                    <option value="NY"></option>
+                    <option value="NC"></option>
+                    <option value="ND"></option>
+                    <option value="OH"></option>
+                    <option value="OK"></option>
+                    <option value="OR"></option>
+                    <option value="PA"></option>
+                    <option value="RI"></option>
+                    <option value="SC"></option>
+                    <option value="SD"></option>
+                    <option value="TN"></option>
+                    <option value="TX"></option>
+                    <option value="UT"></option>
+                    <option value="VT"></option>
+                    <option value="VA"></option>
+                    <option value="WA"></option>
+                    <option value="WV"></option>
+                    <option value="WI"></option>
+                    <option value="WY"></option>
+                </datalist>
+            </div>
+
+        </form>
 
 
+    </div>
 
 </body>
