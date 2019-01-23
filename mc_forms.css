@@ -14,8 +14,15 @@
 
 /* Validation Styles */
 
-div {
-    float: left;
+input,
+select {
+    width: 100%;
+    padding: 3px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input:focus,
@@ -24,6 +31,13 @@ textarea:focus {
     background: rgb(245, 245, 140);
 }
 
+input#speedBox:focus:valid,
+input#memBox:focus:valid,
+input#sizeBox:focus:valid,
+input#hardBox:focus:valid,
+input#dvdBox:focus:valid,
+input#cardBox:focus:valid,
+input#readBox:focus:valid,
 input#firstBox:focus:valid,
 input#lastBox:focus:valid,
 input#streetBox:focus:valid,
@@ -34,6 +48,13 @@ input#zipBox:focus:valid {
     background: rgb(220, 255, 220) url("mc_go.png") right/contain no-repeat;
 }
 
+input#speedBox:focus:invalid,
+input#memBox:focus:invalid,
+input#sizeBox:focus:invalid,
+input#hardBox:focus:invalid,
+input#dvdBox:focus:invalid,
+input#cardBox:focus:invalid,
+input#readBox:focus:invalid,
 input#firstBox:focus:invalid,
 input#lastBox:focus:invalid,
 input#streetBox:focus:invalid,

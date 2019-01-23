@@ -23,104 +23,169 @@
 
 <body>
 
-    <div>
+    <img src="mc_logo.png" alt="">
 
-        <form name="cForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
+    <form name="oForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
 
-            <div>
-                <label for="fName">First Name</label>
-                <input name="fName" id="firstBox" type="text" placeholder="Your First Name" required>
-            </div>
+        <h1>Computer Specifications</h1>
 
-            <div>
-                <label for="lName">Last name</label>
-                <input name="lName" id="lastBox" type="text" placeholder="Your Last Name" required>
-            </div>
+        <label for="pSpeed">Processor Speed</label>
+        <input type="pSpeed" id="speedBox" type="text" placeholder="3.2 / 4.0 / 5.2 - GHz" list="speedList" required>
+        <datalist id="speedList">
+            <option value="3.2 GHz"></option>
+            <option value="4.0 GHz"></option>
+            <option value="5.2 GHz"></option>
+        </datalist>
 
-            <div>
-                <label for="street">Street Address</label>
-                <input name="street" id="streetBox" type="text" placeholder="Your Street Address" required>
-            </div>
+        <label for="memory">Memory</label>
+        <input type="memory" id="memBox" type="text" placeholder="1 / 2 / 4 / 8 - GB" list="memList" required>
+        <datalist id="memList">
+            <option value="1 GB"></option>
+            <option value="2 GB"></option>
+            <option value="4 GB"></option>
+            <option value="8 GB"></option>
+        </datalist>
 
-            <div>
-                <label for="city">City</label>
-                <input name="city" id="cityBox" type="text" placeholder="Your City" required>
-            </div>
+        <label for="mSize">Monitor Size</label>
+        <input type="mSize" id="sizeBox" type="text" placeholder="15 / 17 / 19 / 21 - ''" list="sizeList" required>
+        <datalist id="sizeList">
+            <option value="15''"></option>
+            <option value="17''"></option>
+            <option value="19''"></option>
+            <option value="21''"></option>
+        </datalist>
 
-            <div>
-                <label for="state">State</label>
-                <input name="state" id="stateBox" type="text" list="stateList" placeholder="(NN)" required>
-            </div>
+        <label for="hDrive">Hard Drive</label>
+        <input type="hDrive" id="hardBox" type="text" placeholder="240 / 500 / 750 - GB / 1 TB" list="hardList"
+            required>
+        <datalist id="hardList">
+            <option value="240 GB"></option>
+            <option value="500 GB"></option>
+            <option value="750 GB"></option>
+            <option value="1 TB"></option>
+        </datalist>
 
-            <div>
-                <label for="zip">Zip Code</label>
-                <input name="zip" id="zipBox" type="text" pattern="^\d{5}(-\d{4})?$" placeholder="(nnnnn)" required>
-            </div>
+        <label for="dBurner">DVD Burner</label>
+        <input type="dBurner" id="dvdBox" type="text" placeholder="Yes / No" list="dvdList" required>
+        <datalist id="dvdList">
+            <option value="Yes"></option>
+            <option value="No"></option>
+        </datalist>
 
-            <div>
-                <label for="phone">Phone Number</label>
-                <input name="phone" id="phoneBox" type="text" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
-                    placeholder="(nnn) nnn-nnnn" required>
-            </div>
+        <label for="tCard">Turner Card</label>
+        <input type="tCard" id="cardBox" type="text" placeholder="Yes / No" list="cardList" required>
+        <datalist id="cardList">
+            <option value="Yes"></option>
+            <option value="No"></option>
+        </datalist>
 
-            <div>
-                <datalist id="stateList">
-                    <option value="Al"></option>
-                    <option value="Ak"></option>
-                    <option value="AZ"></option>
-                    <option value="AR"></option>
-                    <option value="CA"></option>
-                    <option value="CO"></option>
-                    <option value="CT"></option>
-                    <option value="DE"></option>
-                    <option value="FL"></option>
-                    <option value="GA"></option>
-                    <option value="HI"></option>
-                    <option value="ID"></option>
-                    <option value="IL"></option>
-                    <option value="IN"></option>
-                    <option value="IA"></option>
-                    <option value="KS"></option>
-                    <option value="KY"></option>
-                    <option value="LA"></option>
-                    <option value="ME"></option>
-                    <option value="MD"></option>
-                    <option value="MA"></option>
-                    <option value="MI"></option>
-                    <option value="MN"></option>
-                    <option value="MS"></option>
-                    <option value="MO"></option>
-                    <option value="MT"></option>
-                    <option value="NE"></option>
-                    <option value="NV"></option>
-                    <option value="NH"></option>
-                    <option value="NJ"></option>
-                    <option value="NM"></option>
-                    <option value="NY"></option>
-                    <option value="NC"></option>
-                    <option value="ND"></option>
-                    <option value="OH"></option>
-                    <option value="OK"></option>
-                    <option value="OR"></option>
-                    <option value="PA"></option>
-                    <option value="RI"></option>
-                    <option value="SC"></option>
-                    <option value="SD"></option>
-                    <option value="TN"></option>
-                    <option value="TX"></option>
-                    <option value="UT"></option>
-                    <option value="VT"></option>
-                    <option value="VA"></option>
-                    <option value="WA"></option>
-                    <option value="WV"></option>
-                    <option value="WI"></option>
-                    <option value="WY"></option>
-                </datalist>
-            </div>
+        <label for="mRead">Media Card Reader</label>
+        <input type="mRead" id="readBox" type="text" placeholder="Yes / No" list="readList" required>
+        <datalist id="readList">
+            <option value="Yes"></option>
+            <option value="No"></option>
+        </datalist>
 
-        </form>
+    </form>
+
+    <form name="cForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
+
+        <h1>Customer Information</h1>
+
+        <label for="fName">First Name</label>
+        <input name="fName" id="firstBox" type="text" placeholder="Your First Name" required>
 
 
-    </div>
+
+        <label for="lName">Last name</label>
+        <input name="lName" id="lastBox" type="text" placeholder="Your Last Name" required>
+
+
+
+        <label for="street">Street Address</label>
+        <input name="street" id="streetBox" type="text" placeholder="Your Street Address" required>
+
+
+
+        <label for="city">City</label>
+        <input name="city" id="cityBox" type="text" placeholder="Your City" required>
+
+
+
+        <label for="state">State</label>
+        <input name="state" id="stateBox" type="text" list="stateList" placeholder="(NN)" required>
+
+
+
+        <label for="zip">Zip Code</label>
+        <input name="zip" id="zipBox" type="text" pattern="^\d{5}(-\d{4})?$" placeholder="(nnnnn)" required>
+
+
+
+        <label for="phone">Phone Number</label>
+        <input name="phone" id="phoneBox" type="text" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder="(nnn) nnn-nnnn"
+            required>
+
+
+
+        <datalist id="stateList">
+            <option value="Al"></option>
+            <option value="Ak"></option>
+            <option value="AZ"></option>
+            <option value="AR"></option>
+            <option value="CA"></option>
+            <option value="CO"></option>
+            <option value="CT"></option>
+            <option value="DE"></option>
+            <option value="FL"></option>
+            <option value="GA"></option>
+            <option value="HI"></option>
+            <option value="ID"></option>
+            <option value="IL"></option>
+            <option value="IN"></option>
+            <option value="IA"></option>
+            <option value="KS"></option>
+            <option value="KY"></option>
+            <option value="LA"></option>
+            <option value="ME"></option>
+            <option value="MD"></option>
+            <option value="MA"></option>
+            <option value="MI"></option>
+            <option value="MN"></option>
+            <option value="MS"></option>
+            <option value="MO"></option>
+            <option value="MT"></option>
+            <option value="NE"></option>
+            <option value="NV"></option>
+            <option value="NH"></option>
+            <option value="NJ"></option>
+            <option value="NM"></option>
+            <option value="NY"></option>
+            <option value="NC"></option>
+            <option value="ND"></option>
+            <option value="OH"></option>
+            <option value="OK"></option>
+            <option value="OR"></option>
+            <option value="PA"></option>
+            <option value="RI"></option>
+            <option value="SC"></option>
+            <option value="SD"></option>
+            <option value="TN"></option>
+            <option value="TX"></option>
+            <option value="UT"></option>
+            <option value="VT"></option>
+            <option value="VA"></option>
+            <option value="WA"></option>
+            <option value="WV"></option>
+            <option value="WI"></option>
+            <option value="WY"></option>
+        </datalist>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+
+
 
 </body>
