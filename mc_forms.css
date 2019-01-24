@@ -12,24 +12,75 @@
       
 */
 
-/* Validation Styles */
+/* The form's background is given a gradient that goes from blue to white from the farthest side.
+It's also given a margin with top and bottom having 3em and the sides being automatic, a grey, solid border with four pixels
+in length, and it has that border radius set to seven pixels. */
+
+form {
+    background-image: radial-gradient(farthest-side at 80% 50%, white, blue);
+    margin: 3em auto;
+    border: 4px solid grey;
+    border-radius: 7px;
+}
+
+/* Both the input and select areas are given a width of 99% with side padding of fifthteen, top and bottom padding set to
+three pixels. Margin also has a side of point five em, a bottom of three em, and a top of point five em. They are also
+displated as inline-block, have a border of four pixels long solid, grey, and finally a border radius of seven pixels. */
 
 input,
 select {
-    width: 100%;
+    width: 99%;
     padding: 3px 15px;
-    margin: 8px 0;
+    margin: .5em .5em 3em;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border: 4px solid grey;
+    border-radius: 7px;
 }
+
+/* All labels with their text are to be light blue in color, have their font size increased to one point five em, have
+a left margin one em long, and be given a one pixel offset, black text shadow. */
+
+label {
+    color: lightblue;
+    font-size: 1.5em;
+    margin-left: 1em;
+    text-shadow: 1px 1px black;
+}
+
+/* All inputs that have the type of "submit", which is the submit button, will have its width set to twenty percent,
+side margin to fourty percent and top and bottom margins to one em. The background color is then set to yellow, with
+a font size of two em and a font family with the queue provided below. */
+
+input[type="submit"] {
+    width: 20%;
+    margin: 1em 40%;
+    background-color: yellow;
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Both heading one tags should have a size of two em, margins with one em all around, a text color of Yellow, and
+a text shadow with one pixel offsets that is black. */
+
+h1 {
+    font-size: 2em;
+    margin: 1em;
+    color: yellow;
+    text-shadow: 1px 1px black;
+}
+
+/* Validation Styles */
+
+/* In the validation styles, input, select, and textarea when put into focus are given a yellowish shade. */
 
 input:focus,
 select:focus,
 textarea:focus {
-    background: rgb(245, 245, 140);
+    background: rgb(255, 255, 123);
 }
+
+/* To tell the user the inputted text is correct, all fields are set to turn green and have an image of a green checkmark
+show up on the right of the open field with it being contained with no tiling. */
 
 input#speedBox:focus:valid,
 input#memBox:focus:valid,
@@ -45,8 +96,11 @@ input#cityBox:focus:valid,
 input#stateBox:focus:valid,
 input#phoneBox:focus:valid,
 input#zipBox:focus:valid {
-    background: rgb(220, 255, 220) url("mc_go.png") right/contain no-repeat;
+    background: rgb(120, 255, 120) url("mc_go.png") right/contain no-repeat;
 }
+
+/* And finally, to tell users the info entered is not valid, all boxes are programmed here to be set to a shade of red,
+and given a red "X" symbol contained in the field to the right with no repeating. */
 
 input#speedBox:focus:invalid,
 input#memBox:focus:invalid,
@@ -62,5 +116,5 @@ input#cityBox:focus:invalid,
 input#stateBox:focus:invalid,
 input#phoneBox:focus:invalid,
 input#zipBox:focus:invalid {
-    background: rgb(255, 232, 220) url("mc_stop.png") right/contain no-repeat;
+    background: rgb(255, 169, 123) url("mc_stop.png") right/contain no-repeat;
 }

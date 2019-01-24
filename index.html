@@ -12,6 +12,8 @@
 
    -->
 
+    <!-- Our head as per usual includes the text declaration, viewport, and links all stylesheets, including javascript. -->
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="mc_styles.css" />
@@ -23,14 +25,30 @@
 
 <body>
 
+    <!-- Starting off our body is the inserted logo for the page, telling the veiwer what site they're on. -->
+
     <img src="mc_logo.png" alt="">
+
+    <!-- Next, we have our first form that is for the user to select all of their disired computer specifications.
+    This form in particular is has its method set to "POST" to the URL below, and is given the internal name "oForm". -->
 
     <form name="oForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
 
         <h1>Computer Specifications</h1>
 
+        <!-- We have our first label and input that will introduce a trend for all attributes within these two forms.
+        They will have a type and name that will be apprivaited with camel case for internal values, an ID assinged
+        for them to be targetted in the CSS, a type delclaration, which is always "text" in these cases, placeholder
+        text that tells the user what info they will be put in through a list, which is linked from the next attribute,
+        and finally, a "required" value that makes sure that all these fields must be filled in.
+     -->
+
         <label for="pSpeed">Processor Speed</label>
         <input type="pSpeed" id="speedBox" type="text" placeholder="3.2 / 4.0 / 5.2 - GHz" list="speedList" required>
+
+        <!-- All of these lists of options have an ID that the labels link to have their options available in the blank
+    where they are declared by the option value text. -->
+
         <datalist id="speedList">
             <option value="3.2 GHz"></option>
             <option value="4.0 GHz"></option>
@@ -47,7 +65,7 @@
         </datalist>
 
         <label for="mSize">Monitor Size</label>
-        <input type="mSize" id="sizeBox" type="text" placeholder="15 / 17 / 19 / 21 - ''" list="sizeList" required>
+        <input type="mSize" id="sizeBox" type="text" placeholder="15 / 17 / 19 / 21 - Inches" list="sizeList" required>
         <datalist id="sizeList">
             <option value="15''"></option>
             <option value="17''"></option>
@@ -64,6 +82,9 @@
             <option value="750 GB"></option>
             <option value="1 TB"></option>
         </datalist>
+
+        <!-- For the next three fields, the list of options are based off of two options of "Yes" and "No", rather
+        than the more specific ones given earlier. -->
 
         <label for="dBurner">DVD Burner</label>
         <input type="dBurner" id="dvdBox" type="text" placeholder="Yes / No" list="dvdList" required>
@@ -88,9 +109,15 @@
 
     </form>
 
+    <!-- We then have our second form that is for the customers information to be added in, with a similar "POST" method
+        and a cForm name. -->
+
     <form name="cForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
 
         <h1>Customer Information</h1>
+
+        <!-- Most of these fields are the same as before, but now the user inputs their data instead of picking from a
+        list, and the placeholder attribute reflex this by telling more exactly what to type in. -->
 
         <label for="fName">First Name</label>
         <input name="fName" id="firstBox" type="text" placeholder="Your First Name" required>
@@ -110,22 +137,10 @@
         <label for="city">City</label>
         <input name="city" id="cityBox" type="text" placeholder="Your City" required>
 
-
+        <!-- The State field is the only exception to this by having an option list with abbrivations of every state. -->
 
         <label for="state">State</label>
         <input name="state" id="stateBox" type="text" list="stateList" placeholder="(NN)" required>
-
-
-
-        <label for="zip">Zip Code</label>
-        <input name="zip" id="zipBox" type="text" pattern="^\d{5}(-\d{4})?$" placeholder="(nnnnn)" required>
-
-
-
-        <label for="phone">Phone Number</label>
-        <input name="phone" id="phoneBox" type="text" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder="(nnn) nnn-nnnn"
-            required>
-
 
 
         <datalist id="stateList">
@@ -180,6 +195,22 @@
             <option value="WI"></option>
             <option value="WY"></option>
         </datalist>
+
+
+        <!-- For the Zip Code and Phone Number, there are patterns given in to make sure the user's data put in is
+            valid and this is strengthened in further by the placeholder text being exactly what the must put in. -->
+
+        <label for="zip">Zip Code</label>
+        <input name="zip" id="zipBox" type="text" pattern="^\d{5}(-\d{4})?$" placeholder="(nnnnn)" required>
+
+
+
+        <label for="phone">Phone Number</label>
+        <input name="phone" id="phoneBox" type="text" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder="(nnn) nnn-nnnn"
+            required>
+
+        <!-- Wrapping up both forms is a submit button where the viewer can send all of their filled out fields
+                if they are all varified, and if not, then it will instruct them which ones must be fixed. -->
 
         <input type="submit" value="Submit">
 
